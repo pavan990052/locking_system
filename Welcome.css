@@ -1,0 +1,732 @@
+.navbar {
+    margin-bottom: 0;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-nav .nav-link:hover {
+    color: blue !important;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        font-size: 20px;
+    }
+}
+
+main {
+    margin-top: 60px;
+    margin-left: 25px;
+}
+
+h6 {
+    color: #007bff;
+}
+
+h5 {
+    color: dimgray;
+}
+
+button {
+    width: 25%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+img {
+    margin-top: 20px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .image-container {
+        margin-left: 20px;
+    }
+
+    .main-content img {
+        width: 100%;
+        max-width: 500px;
+        height: 500px;
+    }
+}
+
+.images1 img {
+    margin: 18px;
+}
+
+ /* Make hero section full height */
+ .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 50px; /* Adjusted padding for better spacing */
+    padding-bottom: 50px; /* Adjusted padding for better spacing */
+}
+
+.cards {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    width: 400px; /* Adjusted width for medium screens */
+    margin: 0 auto; /* Center align on medium screens */
+}
+
+.cards h1 {
+    font-weight: 500;
+    color: #000;
+    font-size: 2em; /* Adjusted font size for better readability */
+}
+
+.cards h5 {
+    text-align: center;
+    font-size: 1em; /* Adjusted font size for better readability */
+}
+
+/* Adjust button width for smaller screens */
+.btn {
+    width: 50%;
+    margin-top: 20px;
+}
+.btn {
+display: inline-block;
+padding: 10px 20px;
+background-color: #007bff;
+color: #fff;
+text-decoration: none;
+border-radius: 20px;
+transition: background-color 0.3s ease;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.btn:hover {
+background-color: #0056b3;
+}
+
+/* Make the image responsive */
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adjust spacing for better readability on smaller screens */
+.content {
+    padding-left: 0; /* Remove padding on the left */
+}
+
+/* Adjust font size and spacing for smaller screens */
+.content h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.content h5 {
+    font-size: 0.8em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Adjust column layout for smaller screens */
+.col {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card {
+    width: 250px;
+    margin: 0 10px;
+    height: 320px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.card-title {
+    color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Footer styling */
+#footer_section {
+    background-color: #343435;
+    padding: 40px ;
+}
+
+#footer_section .container {
+    margin: auto;
+}
+
+#footer_section h4 {
+    color: #eddede;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#footer_section .col-md-2 {
+    margin-right: 20px; /* Adjust the value as needed */
+}
+#footer_section p {
+    color: #eae4e4;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#footer_section ul {
+    padding: 0;
+    list-style: none;
+}
+
+#footer_section ul li {
+    margin-bottom: 10px;
+}
+
+#footer_section ul li a {
+    color: #f6ecec;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#footer_section ul li a:hover {
+    color: #007bff;
+}
+
+.social-icons a {
+    color: #eceaea;
+    font-size: 24px;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-md-3 {
+    flex: 0 0 25%;
+    /* Adjust the width as needed */
+    max-width: 25%;
+    padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeftAnimation {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRightAnimation {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.main-content {
+    animation: fadeInAnimation 1s ease forwards;
+}
+
+.image-container {
+    animation: slideInRightAnimation 1s ease forwards;
+}
+
+.images1 img {
+    animation: slideInLeftAnimation 1s ease forwards;
+    animation-delay: 0.5s;/
+}
+
+ul {
+    list-style-type: none;
+}
+
+li img {
+    width: 20px; /* Adjust size of tick mark */
+    margin-right: 5px; /* Adjust spacing between tick mark and text */
+}
+
+
+  /* Keyframes for animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply animation to each image */
+.images1 img {
+    animation: slideIn 3.5s ease forwards;
+    animation-delay: 5.1s; /* Delay each animation */
+}
+/* Keyframes for animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to each card */
+.card {
+    animation: fadeIn 2.5s ease forwards;
+    opacity: 0;
+}
+
+.card:nth-child(1) {
+    animation-delay: 2.12s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 2.45s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 2.47s;
+}
+
+.card:nth-child(4) {
+    animation-delay: 2.50s;
+}
+
+
+   
+   /* .image1-container {
+     max-width: 100%;
+     max-height:100%;
+     
+   }
+   
+   
+
+/* Animation keyframes */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Apply animations to the image */
+.image1-container img {
+    animation: slideInRight 1s ease forwards; /* Animation for sliding in from right */
+}
+
+/* You can apply other animations as needed */
+.image1-container img:nth-child(2) {
+    animation: fadeIn 10s ease forwards; /* Example of fadeIn animation */
+}
+
+.image1-container img:nth-child(3) {
+    animation: rotate 20s linear infinite; /* Example of rotation animation */
+} */
+
+.h5
+{
+    margin-top: 500px;
+}
+
+
+section {
+    padding: 20px;
+    text-align: right; /* Align the content to the right */
+  }
+  .service {
+    border: 1px solid #1d1c1c;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: inline-block; /* Display the services side by side */
+    width: calc(50% - 20px); /* 50% width with 20px margin between services */
+    box-sizing: border-box;
+    vertical-align: top; /* Align the services at the top */
+  }
+  .service:nth-child(odd) {
+    clear: both; /* Start a new line after every odd service */
+  }
+  .service h2 {
+    margin-top: 0;
+  }
+  .service img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+  /* features */
+  .features {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  .content-1 {
+    width: 45%;
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 0;
+  }
+  .content-1 h2 {
+    color: #007bff;
+  }
+  
+  .image-1 {
+    width: 45%;
+    animation: slideIn 1s ease-in-out forwards;
+    opacity: 0;
+  }
+  .image-1 img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+ 
+  /* animations */
+  .col {
+    width: calc(33.33% - 20px); /* Adjust as needed */
+    margin: 10px;
+    text-align: center;
+    position: relative;
+    animation: slideIn 1s forwards;
+    opacity: 0;
+  }
+  .col img {
+    max-width: 100%;
+    height: auto;
+  }
+  .col h5, .col p, .col a {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .col:hover h5, .col:hover p, .col:hover a {
+    opacity: 1;
+  }
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .image-container {
+    display: flex;
+}
+
+.image-wrapper {
+    flex: 1;
+    margin-right: 400px; /* Adjust spacing between images */
+}
+
+.image-wrapper:last-child {
+    margin-right: 30px; /* Remove margin from the last image */
+}
+
+.image-wrapper img {
+    max-width: 150%;
+}
+
+.testimonial-section {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background-color: #aed6f4; /* Light blue background color */
+    padding: 30px; /* Add padding for better spacing */
+    height: 90%; /* Set the height of the section to full viewport height */
+}
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonial-title,
+.testimonial-subtitle {
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+/* Adjust margin or padding if needed */
+.testimonial-title {
+    margin-bottom: 0;
+}
+
+.testimonial-subtitle {
+    margin-top: 0;
+}
+
+
+.testimonial-content {
+    text-align: center;
+    margin-left: 290px;
+    margin-bottom: 300px;
+    font-size: 15px;
+}
+
+.testimonial-title {
+    margin-bottom: 30px;
+}
+
+.testimonial-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    overflow: auto;
+    animation: moveImages 10s linear infinite; /* Apply animation to move the images */
+}
+
+.testimonial-image {
+    width: calc(33% - 10px);
+}
+
+.testimonial-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes moveImages {
+    0% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(-550%);
+    }
+}
+
+
+/* Hero section styles */
+/* Container styles */
+.container-10 {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+/* Row styles */
+.row-1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/* Column styles */
+.col-md-6 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* Card styles */
+.card-1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+/* Primary card body styles */
+.card-body-primary {
+    background-color: #007bff;
+    border-radius: 10px;
+    padding: 55px;
+    color: #fff;
+    /* width: 300px; */
+}
+
+/* Secondary card body styles */
+.card-body-secondary {
+    background-color: #4AEEF1;
+    border-radius: 10px;
+    padding: 20px;
+    /* width: 500px; */
+}
+
+/* Image styles */
+.image-10 img {
+    /* Add your image styles here */
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #e11984;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .575rem .150rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #0de64e;
+    border-color: #007bff;
+    padding: 10px;
+    border-radius: 100px;
+    /* width: 5px; */
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0056b3;
+    border-color: #0056b3;
+}

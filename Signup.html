@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Page</title>
+    <link rel="stylesheet" href="Style.css">    
+</head>
+<body>
+    <!---Main container---->
+    <div class="container">
+        <!---Form container-->
+        <div class="form-wrap">
+            <h1>Signup Form</h1>
+                
+            <form action="Signupverify" method="post">
+         
+                <div class="signup-box">
+                    <div class="left-box">
+                        <div class="picture">
+                            <div class="card">
+                                <img src="profile img.jpg" id="profile-pic">
+                                <label for="input-file">Upload Image</label>
+                                <input type="file" accept="image/jpeg,image/png,image/jpg" id="input-file" name="profileImage">
+                            </div>
+                        </div>
+                        <input type="text" id="Fullname" placeholder=" Full Name " class="form-control" name="fullname" required><br>
+                        <input type="text" id="UserName" placeholder=" User Name " class="form-control" name="username" required onkeyup="validateUserName()"><br>
+                        <span id="username-validation" style="color: red;"></span><br>
+                        <input type="email" id="Email" placeholder=" Email " class="form-control" name="email" required><br>
+                      <!--  <input type="text" id="MobileNumber" placeholder=" Mobile Number" class="form-control" name="mobilenumber" required><br>-->   
+                       <input type="text" id="MobileNumber" placeholder=" Mobile Number" class="form-control" name="mobilenumber" required><br>
+                        <input type="password" id="Password" placeholder=" Password " class="form-control" name="password" required onkeyup="validatePassword()"><br>
+                        <span id="password-strength"></span>
+                       <!--<input type="password" id="Confirmpassword" placeholder=" Confirm Password " class="form-control" name="confirmpassword" onkeyup="validateConfirmPassword()"><br>  --> 
+                        <input type="password" id="Confirmpassword" placeholder=" Confirm Password " class="form-control" name="confirmpassword" onkeyup="validateConfirmPassword()">
+                        <span id="password-mismatch" style="color: red;"></span><br>
+                        <!--
+<button type="submit" id="signupButton" onclick="signup()" disabled>Signup Now</button>
+-->
+                        
+                        
+                        <button type="submit">Signup Now</button>
+                        <span id="fill-all-fields" style="color: red;"></span><br>
+                       
+                    </div>
+                    
+                    <div class="right-box">
+                        <img src="logo.jpg" alt=""/>
+                    </div>
+                </div>
+            </form>
+            <p>
+                By Clicking the Signup Button You Agree to Our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+   
+    <script>
+        let profilePic = document.getElementById("profile-pic");
+        let inputFile = document.getElementById("input-file");
+        inputFile.onchange = function(){
+            profilePic.src=URL.createObjectURL(inputFile.files[0])
+        }
+
+        function validatePassword() {
+            let password = document.getElementById("Password").value;
+            let passwordStrength = document.getElementById("password-strength");
+
+            // Regex to match password format: one uppercase, one special character, and numbers
+            let regex = /^(?=.[A-Z])(?=.[!@#$%^&])(?=.[0-9]).{8,}$/;
+
+            if (!regex.test(password)) {
+                passwordStrength.innerText = "Password should be in this format: one uppercase, one special character, and numbers";
+            } else {
+                passwordStrength.innerText = "";
+            }
+            validateConfirmPassword(); // Check if confirm password also matches
+            checkAllFieldsFilled(); // Check if all fields are filled
+        }
+
+        function validateConfirmPassword() {
+            let password = document.getElementById("Password").value;
+            let confirmPassword = document.getElementById("Confirmpassword").value;
+            let signupButton = document.getElementById("signupButton");
+            let passwordMismatchMessage = document.getElementById("password-mismatch");
+
+            if (password !== confirmPassword) {
+                signupButton.disabled = true;
+                passwordMismatchMessage.innerText = "Passwords do not match";
+            } else {
+                signupButton.disabled = false;
+                passwordMismatchMessage.innerText = "";
+            }
+            checkAllFieldsFilled(); // Check if all fields are filled
+        }
+
+        function validateUserName() {
+            let username = document.getElementById("UserName").value;
+            let usernameValidationMessage = document.getElementById("username-validation");
+
+            // Regex to match username format: alphabets and numbers, at least one of each
+            let regex = /^(?=.[A-Za-z])(?=.\d)[A-Za-z\d]+$/;
+
+            if (!regex.test(username)) {
+                usernameValidationMessage.innerText = "Username should contain alphabets and numbers, at least one of each";
+                document.getElementById("signupButton").disabled = true;
+            } else {
+                // Here, you would typically make an AJAX call to check if the username is unique on the server-side
+                // For simplicity, let's assume it's unique
+                usernameValidationMessage.innerText = "";
+                document.getElementById("signupButton").disabled = false;
+            }
+            checkAllFieldsFilled(); // Check if all fields are filled
+        }
+
+        function checkAllFieldsFilled() {
+            let fullname = document.getElementById("Fullname").value;
+            let username = document.getElementById("UserName").value;
+            let email = document.getElementById("Email").value;
+            let mobileNumber = document.getElementById("MobileNumber").value;
+            let password = document.getElementById("Password").value;
+            let confirmPassword = document.getElementById("Confirmpassword").value;
+            let fillAllFieldsMessage = document.getElementById("fill-all-fields");
+            let signupButton = document.getElementById("signupButton");
+
+            if (fullname === "" || username === "" || email === "" || mobileNumber === "" || password === "" || confirmPassword === "") {
+                fillAllFieldsMessage.innerText = "Please fill all fields.";
+                signupButton.disabled = true;
+            } else {
+                fillAllFieldsMessage.innerText = "";
+                signupButton.disabled = false;
+            }
+        }
+
+      //  function signup() {
+      //      alert("Signup Successful!");
+            // You can add further processing here such as form submission or redirection
+    //    }
+    </script>
+    <script src="./localstorge.js"></script>
+    <!---<script src="./Script.js"></script>--->
+</body>
+</html>
